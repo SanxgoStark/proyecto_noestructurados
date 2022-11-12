@@ -51,7 +51,9 @@ namespace proyecto_noestructurados
         private void button1_Click(object sender, EventArgs e)
         {
             //doble carta
-            
+
+            Console.WriteLine("boton doble carta");
+
             REngine engine = REngine.GetInstance();
             var x = engine.Evaluate("x <- c(21, 62, 10)").AsNumeric();
             engine.Evaluate("barplot(x,main='Grafica doble carta',xlab = 'Mes',ylab = 'Cantidad',col=c('darkblue','red','green'),horiz=FALSE,names.arg = c('Agosto', 'Septiembre', 'Octubre'))");
