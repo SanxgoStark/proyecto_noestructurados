@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RDotNet;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -41,5 +42,22 @@ namespace proyecto_noestructurados
         {
 
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //doble carta
+            
+            REngine engine = REngine.GetInstance();
+            var x = engine.Evaluate("x <- c(21, 62, 10)").AsNumeric();
+            var labels = engine.Evaluate("labels <- c('Agosto', 'Septiembre', 'Octubre')");
+            engine.Evaluate("barplot(x,main='Car Distribution',xlab = 'Number of Gears',col=c('darkblue','red'))");
+
+        }
     }
+    
 }
