@@ -1,21 +1,16 @@
 ﻿using RDotNet;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace proyecto_noestructurados
 {
     public partial class Form1 : Form
     {
+        Clases.Conexion Connection;
         public Form1()
         {
             InitializeComponent();
+            Connection = new Clases.Conexion();
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -48,16 +43,69 @@ namespace proyecto_noestructurados
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_doble_Click(object sender, EventArgs e)
         {
-            //doble carta
+            var titulo = "Consumo de hojas tamaño Doble Carta por mes";
 
-            Console.WriteLine("boton doble carta");
+            var valor_a = Connection.graf_doble_carta("agosto");
+            var valor_b = Connection.graf_doble_carta("septiembre");
+            var valor_c = Connection.graf_doble_carta("octubre");
 
             REngine engine = REngine.GetInstance();
-            var x = engine.Evaluate("x <- c(21, 62, 10)").AsNumeric();
-            engine.Evaluate("barplot(x,main='Grafica doble carta',xlab = 'Mes',ylab = 'Cantidad',col=c('darkblue','red','green'),horiz=FALSE,names.arg = c('Agosto', 'Septiembre', 'Octubre'))");
+            var x = engine.Evaluate("x <- c(" + valor_a + "," + valor_b + "," + valor_c + ")").AsNumeric();
+            engine.Evaluate("barplot(x, main='" + titulo + "',xlab = 'Mes',ylab = 'Cantidad',col=c('dodgerblue','darkorange2','gold2'),horiz=FALSE,names.arg=c('agosto','sept','oct'))");
+        }
 
+            private void btn_carta_Click(object sender, EventArgs e)
+        {
+            var titulo = "Consumo de hojas tamaño Carta por mes";
+
+            var valor_a = Connection.graf_carta("agosto");
+            var valor_b = Connection.graf_carta("septiembre");
+            var valor_c = Connection.graf_carta("octubre");
+
+            REngine engine = REngine.GetInstance();
+            var x = engine.Evaluate("x <- c(" + valor_a + "," + valor_b + "," + valor_c + ")").AsNumeric();
+            engine.Evaluate("barplot(x, main='" + titulo + "',xlab = 'Mes',ylab = 'Cantidad',col=c('dodgerblue','darkorange2','gold2'),horiz=FALSE,names.arg=c('agosto','sept','oct'))");
+        }
+
+        private void btn_oficio_Click(object sender, EventArgs e)
+        {
+            var titulo = "Consumo de hojas tamaño Oficio por mes";
+
+            var valor_a = Connection.graf_oficio("agosto");
+            var valor_b = Connection.graf_oficio("septiembre");
+            var valor_c = Connection.graf_oficio("octubre");
+
+            REngine engine = REngine.GetInstance();
+            var x = engine.Evaluate("x <- c(" + valor_a + "," + valor_b + "," + valor_c + ")").AsNumeric();
+            engine.Evaluate("barplot(x, main='" + titulo + "',xlab = 'Mes',ylab = 'Cantidad',col=c('dodgerblue','darkorange2','gold2'),horiz=FALSE,names.arg=c('agosto','sept','oct'))");
+        }
+
+        private void btn_BlancoNegro_Click(object sender, EventArgs e)
+        {
+            var titulo = "Consumo de toner negro por mes";
+
+            var valor_a = Connection.graf_BlancoNegro("agosto");
+            var valor_b = Connection.graf_BlancoNegro("septiembre");
+            var valor_c = Connection.graf_BlancoNegro("octubre");
+
+            REngine engine = REngine.GetInstance();
+            var x = engine.Evaluate("x <- c(" + valor_a + "," + valor_b + "," + valor_c + ")").AsNumeric();
+            engine.Evaluate("barplot(x, main='" + titulo + "',xlab = 'Mes',ylab = 'Cantidad',col=c('dodgerblue','darkorange2','gold2'),horiz=FALSE,names.arg=c('agosto','sept','oct'))");
+        }
+
+        private void btn_color_Click(object sender, EventArgs e)
+        {
+            var titulo = "Consumo de toner de color por mes";
+
+            var valor_a = Connection.graf_TodoColor("agosto");
+            var valor_b = Connection.graf_TodoColor("septiembre");
+            var valor_c = Connection.graf_TodoColor("octubre");
+
+            REngine engine = REngine.GetInstance();
+            var x = engine.Evaluate("x <- c(" + valor_a + "," + valor_b + "," + valor_c + ")").AsNumeric();
+            engine.Evaluate("barplot(x, main='" + titulo + "',xlab = 'Mes',ylab = 'Cantidad',col=c('dodgerblue','darkorange2','gold2'),horiz=FALSE,names.arg=c('agosto','sept','oct'))");
         }
     }
     
