@@ -256,3 +256,6 @@ C:\Users\uriel\source\proyecto_noestructurados\proyecto_noestructurados\bin\Debu
 C:\Users\uriel\source\proyecto_noestructurados\proyecto_noestructurados\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\uriel\source\proyecto_noestructurados\proyecto_noestructurados\bin\Debug\System.Text.Encoding.CodePages.xml
 C:\Users\uriel\source\proyecto_noestructurados\proyecto_noestructurados\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\uriel\source\proyecto_noestructurados\proyecto_noestructurados\bin\Debug\Microsoft.Win32.Registry.xml
+C:\Users\uriel\source\proyecto_noestructurados\proyecto_noestructurados\bin\Debug\System.Security.AccessControl.xml
+C:\Users\uriel\source\proyecto_noestructurados\proyecto_noestructurados\bin\Debug\System.Security.Principal.Windows.xml

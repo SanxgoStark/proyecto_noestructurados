@@ -4,6 +4,14 @@
         <name>DnsClient</name>
     </assembly>
     <members>
+        <member name="T:DnsClient.DnsDatagramReader">
+            <summary>
+            Helper to read from DNS datagrams.
+            </summary>
+            <remarks>
+            The API of this class might change over time and receive breaking changes. Use at own risk.
+            </remarks>
+        </member>
         <member name="M:DnsClient.DnsDatagramReader.ParseString(System.ArraySegment{System.Byte})">
             <summary>
             As defined in https://tools.ietf.org/html/rfc1035#section-5.1 except '()' or '@' or '.'
@@ -4149,12 +4157,6 @@
             </summary>
             <param name="input">An array of 8-bit unsigned integers.</param>
             <returns>The string representation in base 32 hex of <paramref name="input"/>.</returns>
-        </member>
-        <member name="M:DnsClient.Windows.NameResolutionPolicy.Resolve(System.Boolean,System.Boolean)">
-            <summary>
-            Resolve all names from the Name Resolution policy in Windows.
-            </summary>
-            <returns>Returns a list of name servers</returns>
         </member>
         <member name="T:DnsClient.LookupClient">
              <summary>

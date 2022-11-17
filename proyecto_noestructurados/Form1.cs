@@ -23,22 +23,12 @@ namespace proyecto_noestructurados
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }
 
         private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button6_Click(object sender, EventArgs e)
         {
 
         }
@@ -106,6 +96,13 @@ namespace proyecto_noestructurados
             REngine engine = REngine.GetInstance();
             var x = engine.Evaluate("x <- c(" + valor_a + "," + valor_b + "," + valor_c + ")").AsNumeric();
             engine.Evaluate("barplot(x, main='" + titulo + "',xlab = 'Mes',ylab = 'Cantidad',col=c('dodgerblue','darkorange2','gold2'),horiz=FALSE,names.arg=c('agosto','sept','oct'))");
+        }
+
+        private void btn_ventana_Click(object sender, EventArgs e)
+        {
+            Form2 ventanaInformativa = new Form2();
+            ventanaInformativa.Show();
+
         }
     }
     

@@ -40,7 +40,7 @@ namespace proyecto_noestructurados
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btn_color = new System.Windows.Forms.Button();
             this.btn_BlancoNegro = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btn_ventana = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -80,7 +80,6 @@ namespace proyecto_noestructurados
             this.label2.Size = new System.Drawing.Size(140, 20);
             this.label2.TabIndex = 7;
             this.label2.Text = "Consumo de toner";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -169,15 +168,15 @@ namespace proyecto_noestructurados
             this.btn_BlancoNegro.UseVisualStyleBackColor = true;
             this.btn_BlancoNegro.Click += new System.EventHandler(this.btn_BlancoNegro_Click);
             // 
-            // button6
+            // btn_ventana
             // 
-            this.button6.Location = new System.Drawing.Point(308, 514);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(131, 41);
-            this.button6.TabIndex = 17;
-            this.button6.Text = "Mostrar informacion";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.btn_ventana.Location = new System.Drawing.Point(308, 514);
+            this.btn_ventana.Name = "btn_ventana";
+            this.btn_ventana.Size = new System.Drawing.Size(131, 41);
+            this.btn_ventana.TabIndex = 17;
+            this.btn_ventana.Text = "Mostrar informacion";
+            this.btn_ventana.UseVisualStyleBackColor = true;
+            this.btn_ventana.Click += new System.EventHandler(this.btn_ventana_Click);
             // 
             // pictureBox2
             // 
@@ -194,7 +193,7 @@ namespace proyecto_noestructurados
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(766, 584);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.button6);
+            this.Controls.Add(this.btn_ventana);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
@@ -225,7 +224,7 @@ namespace proyecto_noestructurados
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btn_color;
         private System.Windows.Forms.Button btn_BlancoNegro;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btn_ventana;
         private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
