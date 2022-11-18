@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MongoDB.Bson;
 using MongoDB.Driver;
+using RDotNet;
 using System.Windows.Forms;
 using System.Collections;
 
@@ -33,6 +34,70 @@ namespace proyecto_noestructurados.Clases
                 //MessageBox.Show("No se logró conectar a MongoDB. Error: "+e.ToString());
             }
             return cliente;
+        }
+
+        public void creaimagen()
+        {
+            REngine engine;
+            string fileName = "C:\\Users\\gunss\\source\\repos\\proyecto_noestructurados\\imagenes\\myplot.png";
+            
+            var titulo = "Consumo de toner por mes";
+            var valor_a = this.graf_consumo_toner("agosto");
+            var valor_b = this.graf_consumo_toner("septiembre");
+            var valor_c = this.graf_consumo_toner("octubre");
+
+            //init the R engine            
+            REngine.SetEnvironmentVariables();
+            engine = REngine.GetInstance();
+            engine.Initialize();
+
+            CharacterVector fileNameVector = engine.CreateCharacterVector(new[] { fileName });
+            engine.SetSymbol("fileName", fileNameVector);
+
+            // creacion del plot y exportacion
+            try
+            {
+                var x = engine.Evaluate("x <- c(" + valor_a + "," + valor_b + "," + valor_c + ")").AsNumeric();
+                engine.Evaluate("png(filename=fileName, width=6, height=6, units='in', res=100)");
+                engine.Evaluate("barplot(x, main='" + titulo + "',xlab = 'Mes',ylab = 'Cantidad',col=c('dodgerblue','darkorange2','gold2'),horiz=FALSE,names.arg=c('agosto','sept','oct'))");
+                engine.Evaluate("dev.off()");
+            }
+            catch
+            {
+            }
+
+            //clean up
+            engine.Dispose();
+
+            //output
+            Console.WriteLine("");
+            Console.WriteLine("Press any key to exit");
+            //Console.ReadKey();
+        }
+
+        public double graf_consumo_toner(string mes)
+        {
+            var client = new MongoClient();
+            var bd = client.GetDatabase("Proyecto");
+            var collection = bd.GetCollection<Registros>(mes);
+
+            var consumo_residuosxpag = collection
+                .Aggregate()
+                .Group(b => b.residuos_xpagina,
+                ac => new {
+                    id = ac.Key,
+                    total = ac.Sum(b => 1)
+                });
+
+            var residuosxpag_Grupo = consumo_residuosxpag.ToList();
+
+            double resultado = 0;
+            foreach (var group in residuosxpag_Grupo)
+            {
+                resultado += group.id * group.total;
+            }
+
+            return resultado;
         }
 
         public int graf_doble_carta(string mes)

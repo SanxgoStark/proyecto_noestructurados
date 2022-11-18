@@ -50,9 +50,10 @@ namespace proyecto_noestructurados
             // 
             // btn_doble
             // 
-            this.btn_doble.Location = new System.Drawing.Point(24, 30);
+            this.btn_doble.Location = new System.Drawing.Point(32, 37);
+            this.btn_doble.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_doble.Name = "btn_doble";
-            this.btn_doble.Size = new System.Drawing.Size(75, 23);
+            this.btn_doble.Size = new System.Drawing.Size(100, 28);
             this.btn_doble.TabIndex = 0;
             this.btn_doble.Text = "Doble Carta";
             this.btn_doble.UseVisualStyleBackColor = true;
@@ -62,10 +63,9 @@ namespace proyecto_noestructurados
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(289, 25);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(385, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(204, 26);
+            this.label1.Size = new System.Drawing.Size(266, 32);
             this.label1.TabIndex = 4;
             this.label1.Text = "Informacion general";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -74,10 +74,9 @@ namespace proyecto_noestructurados
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(127, 77);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(169, 95);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(140, 20);
+            this.label2.Size = new System.Drawing.Size(173, 25);
             this.label2.TabIndex = 7;
             this.label2.Text = "Consumo de toner";
             // 
@@ -85,19 +84,18 @@ namespace proyecto_noestructurados
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(505, 77);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(673, 95);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(142, 20);
+            this.label3.Size = new System.Drawing.Size(177, 25);
             this.label3.TabIndex = 8;
             this.label3.Text = "Consumo de papel";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(403, 121);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(537, 149);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(332, 238);
+            this.pictureBox1.Size = new System.Drawing.Size(443, 293);
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
@@ -106,20 +104,21 @@ namespace proyecto_noestructurados
             this.groupBox1.Controls.Add(this.btn_doble);
             this.groupBox1.Controls.Add(this.btn_carta);
             this.groupBox1.Controls.Add(this.btn_oficio);
-            this.groupBox1.Location = new System.Drawing.Point(74, 383);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Location = new System.Drawing.Point(99, 471);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(236, 105);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(315, 129);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tipos de Hojas";
             // 
             // btn_carta
             // 
-            this.btn_carta.Location = new System.Drawing.Point(24, 65);
+            this.btn_carta.Location = new System.Drawing.Point(32, 80);
+            this.btn_carta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_carta.Name = "btn_carta";
-            this.btn_carta.Size = new System.Drawing.Size(75, 23);
+            this.btn_carta.Size = new System.Drawing.Size(100, 28);
             this.btn_carta.TabIndex = 13;
             this.btn_carta.Text = "Carta";
             this.btn_carta.UseVisualStyleBackColor = true;
@@ -127,9 +126,10 @@ namespace proyecto_noestructurados
             // 
             // btn_oficio
             // 
-            this.btn_oficio.Location = new System.Drawing.Point(133, 49);
+            this.btn_oficio.Location = new System.Drawing.Point(177, 60);
+            this.btn_oficio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_oficio.Name = "btn_oficio";
-            this.btn_oficio.Size = new System.Drawing.Size(75, 23);
+            this.btn_oficio.Size = new System.Drawing.Size(100, 28);
             this.btn_oficio.TabIndex = 14;
             this.btn_oficio.Text = "Oficio";
             this.btn_oficio.UseVisualStyleBackColor = true;
@@ -139,20 +139,21 @@ namespace proyecto_noestructurados
             // 
             this.groupBox2.Controls.Add(this.btn_color);
             this.groupBox2.Controls.Add(this.btn_BlancoNegro);
-            this.groupBox2.Location = new System.Drawing.Point(441, 383);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Location = new System.Drawing.Point(588, 471);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(236, 105);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Size = new System.Drawing.Size(315, 129);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Color de impresion";
             // 
             // btn_color
             // 
-            this.btn_color.Location = new System.Drawing.Point(139, 49);
+            this.btn_color.Location = new System.Drawing.Point(185, 60);
+            this.btn_color.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_color.Name = "btn_color";
-            this.btn_color.Size = new System.Drawing.Size(81, 23);
+            this.btn_color.Size = new System.Drawing.Size(108, 28);
             this.btn_color.TabIndex = 16;
             this.btn_color.Text = "Color";
             this.btn_color.UseVisualStyleBackColor = true;
@@ -160,9 +161,10 @@ namespace proyecto_noestructurados
             // 
             // btn_BlancoNegro
             // 
-            this.btn_BlancoNegro.Location = new System.Drawing.Point(23, 49);
+            this.btn_BlancoNegro.Location = new System.Drawing.Point(31, 60);
+            this.btn_BlancoNegro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_BlancoNegro.Name = "btn_BlancoNegro";
-            this.btn_BlancoNegro.Size = new System.Drawing.Size(101, 23);
+            this.btn_BlancoNegro.Size = new System.Drawing.Size(135, 28);
             this.btn_BlancoNegro.TabIndex = 15;
             this.btn_BlancoNegro.Text = "Blanco/Negro";
             this.btn_BlancoNegro.UseVisualStyleBackColor = true;
@@ -170,9 +172,10 @@ namespace proyecto_noestructurados
             // 
             // btn_ventana
             // 
-            this.btn_ventana.Location = new System.Drawing.Point(308, 514);
+            this.btn_ventana.Location = new System.Drawing.Point(411, 633);
+            this.btn_ventana.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_ventana.Name = "btn_ventana";
-            this.btn_ventana.Size = new System.Drawing.Size(131, 41);
+            this.btn_ventana.Size = new System.Drawing.Size(175, 50);
             this.btn_ventana.TabIndex = 17;
             this.btn_ventana.Text = "Mostrar informacion";
             this.btn_ventana.UseVisualStyleBackColor = true;
@@ -180,18 +183,20 @@ namespace proyecto_noestructurados
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(31, 121);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Location = new System.Drawing.Point(41, 149);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(332, 238);
+            this.pictureBox2.Size = new System.Drawing.Size(443, 293);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 18;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(766, 584);
+            this.ClientSize = new System.Drawing.Size(1021, 719);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btn_ventana);
             this.Controls.Add(this.groupBox2);
@@ -200,6 +205,7 @@ namespace proyecto_noestructurados
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
