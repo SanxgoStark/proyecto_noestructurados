@@ -16,5 +16,6 @@ namespace proyecto_noestructurados.Clases
         public int total_blanco_negro { get; set; }
         public int total_todo_color { get; set; }
         public double residuos_xpagina { get; set; }
+        public int num_paginas_completas { get; set; }
     }
 }

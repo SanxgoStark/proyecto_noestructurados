@@ -36,38 +36,55 @@ namespace proyecto_noestructurados.Clases
             return cliente;
         }
 
-        public void creaimagen()
+        public void genaraciongrap()
         {
             REngine engine;
-            string fileName = "C:\\Users\\gunss\\source\\repos\\proyecto_noestructurados\\imagenes\\myplot.png";
-            
-            var titulo = "Consumo de toner por mes";
-            var valor_a = this.graf_consumo_toner("agosto");
-            var valor_b = this.graf_consumo_toner("septiembre");
-            var valor_c = this.graf_consumo_toner("octubre");
+            // consumo de toner
+            string fileNamet = "C:\\Users\\gunss\\source\\repos\\proyecto_noestructurados\\imagenes\\myplott.png";
+            // consumo de papel
+            string fileNamep = "C:\\Users\\gunss\\source\\repos\\proyecto_noestructurados\\imagenes\\myplotp.png";
 
             //init the R engine            
             REngine.SetEnvironmentVariables();
             engine = REngine.GetInstance();
             engine.Initialize();
 
-            CharacterVector fileNameVector = engine.CreateCharacterVector(new[] { fileName });
-            engine.SetSymbol("fileName", fileNameVector);
+            var titulot = "Consumo de toner";
+            var titulop = "Consumo de papel";
+
+            var valor_ap = this.graf_consumo_papel("agosto");
+            var valor_bp = this.graf_consumo_papel("septiembre");
+            var valor_cp = this.graf_consumo_papel("octubre");
+
+            var valor_at = this.graf_consumo_toner("agosto");
+            var valor_bt = this.graf_consumo_toner("septiembre");
+            var valor_ct = this.graf_consumo_toner("octubre");
+
+            CharacterVector fileNameVectorp = engine.CreateCharacterVector(new[] { fileNamep });
+            engine.SetSymbol("fileNamep", fileNameVectorp);
+
+            CharacterVector fileNameVectort = engine.CreateCharacterVector(new[] { fileNamet });
+            engine.SetSymbol("fileNamet", fileNameVectort);
 
             // creacion del plot y exportacion
             try
             {
-                var x = engine.Evaluate("x <- c(" + valor_a + "," + valor_b + "," + valor_c + ")").AsNumeric();
-                engine.Evaluate("png(filename=fileName, width=6, height=6, units='in', res=100)");
-                engine.Evaluate("barplot(x, main='" + titulo + "',xlab = 'Mes',ylab = 'Cantidad',col=c('dodgerblue','darkorange2','gold2'),horiz=FALSE,names.arg=c('agosto','sept','oct'))");
+                var p = engine.Evaluate("p <- c(" + valor_ap + "," + valor_bp + "," + valor_cp + ")").AsNumeric(); 
+                engine.Evaluate("png(filename=fileNamep, width=6, height=6, units='in', res=100)");
+                engine.Evaluate("barplot(p, main='" + titulop + "',xlab = 'Mes',ylab = 'Cantidad',col=c('dodgerblue','darkorange2','gold2'),horiz=FALSE,names.arg=c('agosto','sept','oct'))");
                 engine.Evaluate("dev.off()");
+
+                var t = engine.Evaluate("t <- c(" + valor_at + "," + valor_bt + "," + valor_ct + ")").AsNumeric();
+                engine.Evaluate("png(filename=fileNamet, width=6, height=6, units='in', res=100)");
+                engine.Evaluate("barplot(t, main='" + titulot + "',xlab = 'Mes',ylab = 'Cantidad',col=c('dodgerblue','darkorange2','gold2'),horiz=FALSE,names.arg=c('agosto','sept','oct'))");
+                engine.Evaluate("dev.off()");
+
             }
             catch
             {
             }
 
-            //clean up
-            engine.Dispose();
+            
 
             //output
             Console.WriteLine("");
@@ -93,6 +110,31 @@ namespace proyecto_noestructurados.Clases
 
             double resultado = 0;
             foreach (var group in residuosxpag_Grupo)
+            {
+                resultado += group.id * group.total;
+            }
+
+            return resultado;
+        }
+
+        public int graf_consumo_papel(string mes)
+        {
+            var client = new MongoClient();
+            var bd = client.GetDatabase("Proyecto");
+            var collection = bd.GetCollection<Registros>(mes);
+
+            var consumo_numpag_completas = collection
+                .Aggregate()
+                .Group(b => b.num_paginas_completas,
+                ac => new {
+                    id = ac.Key,
+                    total = ac.Sum(b => 1)
+                });
+
+            var numpag_completas_Grupo = consumo_numpag_completas.ToList();
+
+            int resultado = 0;
+            foreach (var group in numpag_completas_Grupo)
             {
                 resultado += group.id * group.total;
             }

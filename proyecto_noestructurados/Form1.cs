@@ -18,8 +18,10 @@ namespace proyecto_noestructurados
         {
             InitializeComponent();
             Connection = new Clases.Conexion();
-            Connection.creaimagen();
-            pictureBox2.Image = Image.FromFile(@"C:\\Users\\gunss\\source\\repos\\proyecto_noestructurados\\imagenes\\myplot.png");
+            Connection.genaraciongrap();
+            pictureBox2.Image = Image.FromFile(@"C:\\Users\\gunss\\source\\repos\\proyecto_noestructurados\\imagenes\\myplott.png");
+            pictureBox1.Image = Image.FromFile(@"C:\\Users\\gunss\\source\\repos\\proyecto_noestructurados\\imagenes\\myplotp.png");
+
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -117,8 +119,18 @@ namespace proyecto_noestructurados
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             
-            pictureBox2.Image = Image.FromFile(@"C:\\Users\\gunss\\source\\repos\\proyecto_noestructurados\\imagenes\\myplot.png");
+           
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
         }
     }
     

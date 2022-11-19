@@ -29,10 +29,9 @@ namespace proyecto_noestructurados
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btn_doble = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btn_carta = new System.Windows.Forms.Button();
@@ -50,60 +49,52 @@ namespace proyecto_noestructurados
             // 
             // btn_doble
             // 
+            this.btn_doble.BackColor = System.Drawing.Color.BurlyWood;
+            this.btn_doble.ForeColor = System.Drawing.Color.Black;
             this.btn_doble.Location = new System.Drawing.Point(32, 37);
             this.btn_doble.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_doble.Name = "btn_doble";
             this.btn_doble.Size = new System.Drawing.Size(100, 28);
             this.btn_doble.TabIndex = 0;
             this.btn_doble.Text = "Doble Carta";
-            this.btn_doble.UseVisualStyleBackColor = true;
+            this.btn_doble.UseVisualStyleBackColor = false;
             this.btn_doble.Click += new System.EventHandler(this.btn_doble_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(385, 31);
+            this.label1.BackColor = System.Drawing.Color.Green;
+            this.label1.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.BurlyWood;
+            this.label1.Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")));
+            this.label1.Location = new System.Drawing.Point(318, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(266, 32);
+            this.label1.Size = new System.Drawing.Size(407, 34);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Informacion general";
+            this.label1.Text = "INFORMACION GENERAL";
             this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(169, 95);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(173, 25);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Consumo de toner";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(673, 95);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(177, 25);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Consumo de papel";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(537, 149);
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Location = new System.Drawing.Point(537, 89);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(443, 293);
+            this.pictureBox1.Size = new System.Drawing.Size(443, 353);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.btn_doble);
             this.groupBox1.Controls.Add(this.btn_carta);
             this.groupBox1.Controls.Add(this.btn_oficio);
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.BurlyWood;
             this.groupBox1.Location = new System.Drawing.Point(99, 471);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
@@ -115,31 +106,38 @@ namespace proyecto_noestructurados
             // 
             // btn_carta
             // 
+            this.btn_carta.BackColor = System.Drawing.Color.BurlyWood;
+            this.btn_carta.ForeColor = System.Drawing.Color.Black;
             this.btn_carta.Location = new System.Drawing.Point(32, 80);
             this.btn_carta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_carta.Name = "btn_carta";
             this.btn_carta.Size = new System.Drawing.Size(100, 28);
             this.btn_carta.TabIndex = 13;
             this.btn_carta.Text = "Carta";
-            this.btn_carta.UseVisualStyleBackColor = true;
+            this.btn_carta.UseVisualStyleBackColor = false;
             this.btn_carta.Click += new System.EventHandler(this.btn_carta_Click);
             // 
             // btn_oficio
             // 
+            this.btn_oficio.BackColor = System.Drawing.Color.BurlyWood;
+            this.btn_oficio.ForeColor = System.Drawing.Color.Black;
             this.btn_oficio.Location = new System.Drawing.Point(177, 60);
             this.btn_oficio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_oficio.Name = "btn_oficio";
             this.btn_oficio.Size = new System.Drawing.Size(100, 28);
             this.btn_oficio.TabIndex = 14;
             this.btn_oficio.Text = "Oficio";
-            this.btn_oficio.UseVisualStyleBackColor = true;
+            this.btn_oficio.UseVisualStyleBackColor = false;
             this.btn_oficio.Click += new System.EventHandler(this.btn_oficio_Click);
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.Controls.Add(this.btn_color);
             this.groupBox2.Controls.Add(this.btn_BlancoNegro);
-            this.groupBox2.Location = new System.Drawing.Point(588, 471);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.ForeColor = System.Drawing.Color.BurlyWood;
+            this.groupBox2.Location = new System.Drawing.Point(599, 471);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -150,43 +148,50 @@ namespace proyecto_noestructurados
             // 
             // btn_color
             // 
+            this.btn_color.BackColor = System.Drawing.Color.BurlyWood;
+            this.btn_color.ForeColor = System.Drawing.Color.Black;
             this.btn_color.Location = new System.Drawing.Point(185, 60);
             this.btn_color.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_color.Name = "btn_color";
             this.btn_color.Size = new System.Drawing.Size(108, 28);
             this.btn_color.TabIndex = 16;
             this.btn_color.Text = "Color";
-            this.btn_color.UseVisualStyleBackColor = true;
+            this.btn_color.UseVisualStyleBackColor = false;
             this.btn_color.Click += new System.EventHandler(this.btn_color_Click);
             // 
             // btn_BlancoNegro
             // 
+            this.btn_BlancoNegro.BackColor = System.Drawing.Color.BurlyWood;
+            this.btn_BlancoNegro.ForeColor = System.Drawing.Color.Black;
             this.btn_BlancoNegro.Location = new System.Drawing.Point(31, 60);
             this.btn_BlancoNegro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_BlancoNegro.Name = "btn_BlancoNegro";
             this.btn_BlancoNegro.Size = new System.Drawing.Size(135, 28);
             this.btn_BlancoNegro.TabIndex = 15;
             this.btn_BlancoNegro.Text = "Blanco/Negro";
-            this.btn_BlancoNegro.UseVisualStyleBackColor = true;
+            this.btn_BlancoNegro.UseVisualStyleBackColor = false;
             this.btn_BlancoNegro.Click += new System.EventHandler(this.btn_BlancoNegro_Click);
             // 
             // btn_ventana
             // 
+            this.btn_ventana.BackColor = System.Drawing.Color.BurlyWood;
+            this.btn_ventana.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ventana.Location = new System.Drawing.Point(411, 633);
             this.btn_ventana.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_ventana.Name = "btn_ventana";
             this.btn_ventana.Size = new System.Drawing.Size(175, 50);
             this.btn_ventana.TabIndex = 17;
             this.btn_ventana.Text = "Mostrar informacion";
-            this.btn_ventana.UseVisualStyleBackColor = true;
+            this.btn_ventana.UseVisualStyleBackColor = false;
             this.btn_ventana.Click += new System.EventHandler(this.btn_ventana_Click);
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(41, 149);
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Location = new System.Drawing.Point(41, 89);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(443, 293);
+            this.pictureBox2.Size = new System.Drawing.Size(443, 353);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 18;
             this.pictureBox2.TabStop = false;
@@ -196,18 +201,22 @@ namespace proyecto_noestructurados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackColor = System.Drawing.Color.YellowGreen;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1021, 719);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btn_ventana);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.ForeColor = System.Drawing.Color.Black;
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
@@ -221,8 +230,6 @@ namespace proyecto_noestructurados
 
         private System.Windows.Forms.Button btn_doble;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btn_carta;
