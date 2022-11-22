@@ -40,9 +40,9 @@ namespace proyecto_noestructurados.Clases
         {
             REngine engine;
             // consumo de toner
-            string fileNamet = "C:\\Users\\gunss\\source\\repos\\proyecto_noestructurados\\imagenes\\myplott.png";
+            string fileNamet = "C:\\Users\\uriel\\source\\proyecto_noestructurados\\imagenes\\myplott.png";
             // consumo de papel
-            string fileNamep = "C:\\Users\\gunss\\source\\repos\\proyecto_noestructurados\\imagenes\\myplotp.png";
+            string fileNamep = "C:\\Users\\uriel\\source\\proyecto_noestructurados\\imagenes\\myplotp.png";
 
             //init the R engine            
             REngine.SetEnvironmentVariables();

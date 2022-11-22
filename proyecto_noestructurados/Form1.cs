@@ -19,8 +19,8 @@ namespace proyecto_noestructurados
             InitializeComponent();
             Connection = new Clases.Conexion();
             Connection.genaraciongrap();
-            pictureBox2.Image = Image.FromFile(@"C:\\Users\\gunss\\source\\repos\\proyecto_noestructurados\\imagenes\\myplott.png");
-            pictureBox1.Image = Image.FromFile(@"C:\\Users\\gunss\\source\\repos\\proyecto_noestructurados\\imagenes\\myplotp.png");
+            pictureBox2.Image = Image.FromFile(@"C:\\Users\\uriel\\source\\proyecto_noestructurados\\imagenes\\myplott.png");
+            pictureBox1.Image = Image.FromFile(@"C:\\Users\\uriel\\source\\proyecto_noestructurados\\imagenes\\myplotp.png");
 
         }
 

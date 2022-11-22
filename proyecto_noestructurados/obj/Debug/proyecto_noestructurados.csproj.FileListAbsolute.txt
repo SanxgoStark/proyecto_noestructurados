@@ -292,3 +292,4 @@ C:\Users\gunss\source\repos\proyecto_noestructurados\proyecto_noestructurados\bi
 C:\Users\gunss\source\repos\proyecto_noestructurados\proyecto_noestructurados\bin\Debug\System.Security.Principal.Windows.xml
 C:\Users\gunss\source\repos\proyecto_noestructurados\proyecto_noestructurados\bin\Debug\System.Text.Encoding.CodePages.xml
 C:\Users\gunss\source\repos\proyecto_noestructurados\proyecto_noestructurados\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\uriel\source\proyecto_noestructurados\proyecto_noestructurados\obj\Debug\proyecto_noestructurados.Form2.resources
